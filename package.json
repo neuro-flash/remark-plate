@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "remark plugin to compile Markdown to a Plate compatible object",
   "license": "MIT",
-  "module": "dist/remark-slate.esm.js",
+  "module": "dist/remark-plate.esm.js",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -25,7 +25,7 @@
     "text editor",
     "plate markdown"
   ],
-  "repository": "Resily/remark-slate",
+  "repository": "Resily/remark-plate",
   "bugs": "https://github.com/Resily/remark-plate/issues",
   "author": "Jack Hanford <jackhanford@gmail.com> (https://jackhanford.com)",
   "contributors": [
