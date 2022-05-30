@@ -1,7 +1,7 @@
 {
-  "name": "remark-slate",
-  "version": "1.8.6",
-  "description": "remark plugin to compile Markdown to a slate compatible object",
+  "name": "remark-plate",
+  "version": "1.0.0",
+  "description": "remark plugin to compile Markdown to a Plate compatible object",
   "license": "MIT",
   "module": "dist/remark-slate.esm.js",
   "scripts": {
@@ -20,12 +20,13 @@
     "mdast",
     "markdown",
     "slate",
+    "plate",
     "RTE",
     "text editor",
-    "slate markdown"
+    "plate markdown"
   ],
-  "repository": "hanford/remark-slate",
-  "bugs": "https://github.com/hanford/remark-slate/issues",
+  "repository": "Resily/remark-slate",
+  "bugs": "https://github.com/Resily/remark-plate/issues",
   "author": "Jack Hanford <jackhanford@gmail.com> (https://jackhanford.com)",
   "contributors": [
     "Jack Hanford <jackhanford@gmail.com> (https://jackhanford.com)",

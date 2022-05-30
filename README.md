@@ -1,11 +1,6 @@
-# remark-slate
+# remark-plate
 
-> Transform the contents of a slate 0.50+ editor into markdown and back again.
-
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
-
-[**remark**][remark] plugin to compile Markdown as a [Slate](https://www.slatejs.org/) 0.50+ compatible object.
+[**remark**][remark] plugin to compile Markdown as a [Plate](https://plate.udecode.io/) format.
 
 - [Slate ➡️ Markdown:](#slate-object-to-markdown)
 - [Markdown ➡️ Slate:](#markdown-to-slate-object)
@@ -20,7 +15,8 @@
 
 ### Slate object to Markdown:
 
-`remark-slate` exports an opinionated `serialize` function that is meant to be invoked with a `slate 0.50+` state object and will transform the object into a markdown document.
+`remark-plate` exports an opinionated `serialize` function that is meant to be invoked with a Plate state object and will transform the object into a markdown document.
+
 
 ```js
 import { serialize } from 'remark-slate';
@@ -48,7 +44,7 @@ export default ({ onChange }) => {
 };
 ```
 
-### Markdown to Slate object:
+### Markdown to Plate object:
 
 When deserializing from markdown to slate, this package is meant to be used with [remark-parse](https://github.com/remarkjs/remark/tree/master/packages/remark-parse) and [unified](https://github.com/unifiedjs/unified).
 
