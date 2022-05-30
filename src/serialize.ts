@@ -170,7 +170,7 @@ export default function serialize(
       }\n${children}\n\`\`\`\n`;
 
     case nodeTypes.link:
-      return `[${children}](${(chunk as BlockType).link || ''})`;
+      return `[${children}](${(chunk as BlockType).url || ''})`;
     case nodeTypes.image:
       return `![${(chunk as BlockType).caption}](${
         (chunk as BlockType).link || ''

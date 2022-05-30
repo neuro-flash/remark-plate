@@ -74,7 +74,7 @@ const slateTree = [
         strikeThrough: true,
       },
       {
-        link: 'https://google.com',
+        url: 'https://google.com',
         type: defaultNodeTypes.link,
         children: [
           {
@@ -94,7 +94,7 @@ const slateTree = [
         text: '',
       },
       {
-        link: 'https://google.com',
+        url: 'https://google.com',
         type: defaultNodeTypes.link,
         children: [
           {

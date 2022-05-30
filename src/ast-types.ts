@@ -76,6 +76,7 @@ export interface BlockType {
   type: string;
   parentType?: string;
   link?: string;
+  url?: string;
   caption?: string;
   language?: string;
   break?: boolean;
