@@ -2,8 +2,8 @@
 
 [**remark**][remark] plugin to compile Markdown as a [Plate](https://plate.udecode.io/) format.
 
-- [Slate ➡️ Markdown:](#slate-object-to-markdown)
-- [Markdown ➡️ Slate:](#markdown-to-slate-object)
+- [Plate ➡️ Markdown:](#plate-object-to-markdown)
+- [Markdown ➡️ Slate:](#markdown-to-plate-object)
 - [Miscellaneous](#miscellaneous)
 - [Local Development](#local-development)
   - [`npm start` or `yarn start`](#npm-start-or-yarn-start)
@@ -13,20 +13,20 @@
 
 ## Usage
 
-### Slate object to Markdown:
+### Plate object to Markdown:
 
 `remark-plate` exports an opinionated `serialize` function that is meant to be invoked with a Plate state object and will transform the object into a markdown document.
 
 
 ```js
-import { serialize } from 'remark-slate';
+import { serialize } from 'remark-plate';
 
 export default ({ onChange }) => {
   const [value, setValue] = useState(initialValue);
 
   const handleChange = useCallback((nextValue) => {
     setValue(nextValue);
-    // serialize slate state to a markdown string
+    // serialize Plate state to a markdown string
     onChange(value.map((v) => serialize(v)).join(''));
   }, [onChange]);
 
@@ -46,7 +46,7 @@ export default ({ onChange }) => {
 
 ### Markdown to Plate object:
 
-When deserializing from markdown to slate, this package is meant to be used with [remark-parse](https://github.com/remarkjs/remark/tree/master/packages/remark-parse) and [unified](https://github.com/unifiedjs/unified).
+When deserializing from markdown to Plate, this package is meant to be used with [remark-parse](https://github.com/remarkjs/remark/tree/master/packages/remark-parse) and [unified](https://github.com/unifiedjs/unified).
 
 Our JS looks something like this:
 
@@ -54,7 +54,7 @@ Our JS looks something like this:
 import fs from 'fs';
 import unified from 'unified';
 import markdown from 'remark-parse';
-import slate from 'remark-slate';
+import slate from 'remark-plate';
 
 unified()
   .use(markdown)
@@ -99,7 +99,7 @@ _italic text_
 1. ordered list item 2
 ```
 
-Results in the following Slate object
+Results in the following Plate object
 
 <details><summary>Reveal</summary>
 
