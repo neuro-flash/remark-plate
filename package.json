@@ -1,6 +1,6 @@
 {
   "name": "remark-plate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remark plugin to compile Markdown to a Plate compatible object",
   "license": "MIT",
   "module": "dist/remark-plate.esm.js",
