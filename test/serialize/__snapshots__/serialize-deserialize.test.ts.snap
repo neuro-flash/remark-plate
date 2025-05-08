@@ -1,72 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Deserialize and serialize mix of break tags and new lines 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
+[
+  {
+    "children": [
+      {
         "text": "a
 ",
       },
-      Object {
+      {
         "break": true,
-        "children": Array [
-          Object {
+        "children": [
+          {
             "text": "",
           },
         ],
-        "type": "paragraph",
+        "type": "p",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
-  Object {
-    "children": Array [
-      Object {
-        "children": Array [
-          Object {
+  {
+    "children": [
+      {
+        "children": [
+          {
             "text": "https://a.com",
           },
         ],
-        "type": "link",
+        "type": "a",
         "url": "https://a.com",
       },
-      Object {
+      {
         "text": "
 ",
       },
-      Object {
+      {
         "break": true,
-        "children": Array [
-          Object {
+        "children": [
+          {
             "text": "",
           },
         ],
-        "type": "paragraph",
+        "type": "p",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
-  Object {
-    "children": Array [
-      Object {
+  {
+    "children": [
+      {
         "text": "e",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
 ]
 `;
 
 exports[`Deserialize heading with new line 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
+[
+  {
+    "children": [
+      {
         "text": "heading one",
       },
     ],
-    "type": "heading_one",
+    "type": "h1",
   },
 ]
 `;

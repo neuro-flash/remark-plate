@@ -1,25 +1,25 @@
 export interface NodeTypes {
-  paragraph: 'paragraph';
-  block_quote: 'block_quote';
-  code_block: 'code_block';
-  link: 'link';
-  ul_list: 'ul_list';
-  ol_list: 'ol_list';
-  listItem: 'list_item';
+  paragraph: string;
+  block_quote: string;
+  code_block: string;
+  link: string;
+  ul_list: string;
+  ol_list: string;
+  listItem: string;
   heading: {
-    1: 'heading_one';
-    2: 'heading_two';
-    3: 'heading_three';
-    4: 'heading_four';
-    5: 'heading_five';
-    6: 'heading_six';
+    1: string;
+    2: string;
+    3: string;
+    4: string;
+    5: string;
+    6: string;
   };
-  emphasis_mark: 'italic';
-  strong_mark: 'bold';
-  delete_mark: 'strikeThrough';
-  inline_code_mark: 'code';
-  thematic_break: 'thematic_break';
-  image: 'image';
+  emphasis_mark: string;
+  strong_mark: string;
+  delete_mark: string;
+  inline_code_mark: string;
+  thematic_break: string;
+  image: string;
 }
 
 export type MdastNodeType =
@@ -40,27 +40,27 @@ export type MdastNodeType =
   | 'text';
 
 export const defaultNodeTypes: NodeTypes = {
-  paragraph: 'paragraph',
-  block_quote: 'block_quote',
+  paragraph: 'p',
+  block_quote: 'blockquote',
   code_block: 'code_block',
-  link: 'link',
-  ul_list: 'ul_list',
-  ol_list: 'ol_list',
-  listItem: 'list_item',
+  link: 'a',
+  ul_list: 'ul',
+  ol_list: 'ol',
+  listItem: 'li',
   heading: {
-    1: 'heading_one',
-    2: 'heading_two',
-    3: 'heading_three',
-    4: 'heading_four',
-    5: 'heading_five',
-    6: 'heading_six',
+    1: 'h1',
+    2: 'h2',
+    3: 'h3',
+    4: 'h4',
+    5: 'h5',
+    6: 'h6',
   },
-  emphasis_mark: 'italic',
-  strong_mark: 'bold',
-  delete_mark: 'strikeThrough',
-  inline_code_mark: 'code',
+  emphasis_mark: 'i',
+  strong_mark: 'b',
+  delete_mark: 's',
+  inline_code_mark: 'code_line',
   thematic_break: 'thematic_break',
-  image: 'image',
+  image: 'img',
 };
 
 export interface LeafType {
@@ -75,9 +75,8 @@ export interface LeafType {
 export interface BlockType {
   type: string;
   parentType?: string;
-  link?: string;
   url?: string;
-  caption?: string;
+  caption?: string | Array<LeafType>;
   language?: string;
   break?: boolean;
   children: Array<BlockType | LeafType>;

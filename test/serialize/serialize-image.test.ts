@@ -1,10 +1,10 @@
-import { serialize, defaultNodeTypes } from '../../src';
+import { defaultNodeTypes, serialize } from '../../src';
 
 it('Serialize a image from slate state to markdown', () => {
   expect(
     serialize({
       type: defaultNodeTypes.image,
-      link: 'https://avatars.githubusercontent.com/u/2148168',
+      url: 'https://avatars.githubusercontent.com/u/2148168',
       caption: "'Jack's profile picture'",
       children: [],
     })

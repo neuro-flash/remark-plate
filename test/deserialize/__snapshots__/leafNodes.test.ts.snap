@@ -1,121 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Deserialize a complex leaf node with bold and emphasis 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "bold": true,
-      "italic": true,
+{
+  "children": [
+    {
+      "b": true,
+      "i": true,
       "text": "bold and italic",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a complex leaf node with delete and bold 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "bold": true,
-      "strikeThrough": true,
+{
+  "children": [
+    {
+      "b": true,
+      "s": true,
       "text": "strikethrough and bold",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a complex leaf node with delete and italic 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "italic": true,
-      "strikeThrough": true,
+{
+  "children": [
+    {
+      "i": true,
+      "s": true,
       "text": "strikethrough and italic",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a complex leaf node with emphasis and bold 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "bold": true,
-      "italic": true,
+{
+  "children": [
+    {
+      "b": true,
+      "i": true,
       "text": "italic and bold",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a leaf node with inline code directly inline 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "code": true,
+{
+  "children": [
+    {
+      "code_line": true,
       "text": "inline code",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a leaf node with just bold 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "bold": true,
+{
+  "children": [
+    {
+      "b": true,
       "text": "bold text",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a leaf node with just italic 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "italic": true,
+{
+  "children": [
+    {
+      "i": true,
       "text": "Italic text",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Deserialize a leaf node with just strikethrough 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "strikeThrough": true,
+{
+  "children": [
+    {
+      "s": true,
       "text": "strikethrough text",
     },
   ],
-  "type": "paragraph",
+  "type": "p",
 }
 `;
 
 exports[`Handles cases where leafs have metadata attached 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
-          "bold": true,
-          "italic": true,
-          "strikeThrough": true,
+{
+  "children": [
+    {
+      "children": [
+        {
+          "b": true,
+          "i": true,
+          "s": true,
           "text": "strikethrough text",
         },
       ],
-      "type": "paragraph",
+      "type": "p",
     },
   ],
-  "type": "link",
+  "type": "a",
   "url": "https://jackhanford.com",
 }
 `;

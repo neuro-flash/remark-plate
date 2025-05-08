@@ -1,4 +1,4 @@
-import { BlockType, defaultNodeTypes, LeafType, NodeTypes } from './ast-types';
+import { BlockType, defaultNodeTypes, LeafType, NodeTypes } from '@/ast-types';
 import escapeHtml from 'escape-html';
 
 interface Options {
@@ -18,15 +18,18 @@ const BREAK_TAG = '<br>';
 export default function serialize(
   chunk: BlockType | LeafType,
   opts: Options = { nodeTypes: defaultNodeTypes }
-) {
+): string | undefined {
   const {
     nodeTypes: userNodeTypes = defaultNodeTypes,
     ignoreParagraphNewline = false,
     listDepth = 0,
   } = opts;
 
-  let text = (chunk as LeafType).text || '';
-  let type = (chunk as BlockType).type || '';
+  const blockChunk = chunk as BlockType;
+  const leafChunk = chunk as LeafType;
+
+  let text = leafChunk.text || '';
+  let type = blockChunk.type || '';
 
   const nodeTypes: NodeTypes = {
     ...defaultNodeTypes,
@@ -165,16 +168,22 @@ export default function serialize(
       return `> ${children}\n\n`;
 
     case nodeTypes.code_block:
-      return `\`\`\`${
-        (chunk as BlockType).language || ''
-      }\n${children}\n\`\`\`\n`;
+      return `\`\`\`${blockChunk.language || ''}\n${children}\n\`\`\`\n`;
 
     case nodeTypes.link:
-      return `[${children}](${(chunk as BlockType).url || ''})`;
+      return `[${children}](${blockChunk.url || ''})`;
     case nodeTypes.image:
-      return `![${(chunk as BlockType).caption}](${
-        (chunk as BlockType).link || ''
-      })`;
+      if (!blockChunk.caption) {
+        return `![${blockChunk.url || ''}](${blockChunk.url || ''})`;
+      }
+
+      if (typeof blockChunk.caption === 'string') {
+        return `![${blockChunk.caption}](${blockChunk.url || ''})`;
+      }
+
+      return `![${blockChunk.caption
+        .map((node) => serialize(node))
+        .join('')}](${blockChunk.url || ''})`;
 
     case nodeTypes.ul_list:
     case nodeTypes.ol_list:
@@ -183,8 +192,7 @@ export default function serialize(
     case nodeTypes.listItem:
       const isOL = chunk && chunk.parentType === nodeTypes.ol_list;
       const treatAsLeaf =
-        (chunk as BlockType).children.length === 1 &&
-        isLeafNode((chunk as BlockType).children[0]);
+        blockChunk.children.length === 1 && isLeafNode(blockChunk.children[0]);
 
       let spacer = '';
       for (let k = 0; listDepth > k; k++) {

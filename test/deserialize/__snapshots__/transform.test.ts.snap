@@ -1,203 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Deserialize complex mdast tree derived from ./example.md 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
+[
+  {
+    "children": [
+      {
         "text": "Heading one",
       },
     ],
-    "type": "heading_one",
+    "type": "h1",
   },
-  Object {
-    "children": Array [
-      Object {
+  {
+    "children": [
+      {
         "text": "Slate POC",
       },
     ],
-    "type": "heading_two",
+    "type": "h2",
   },
-  Object {
-    "children": Array [
-      Object {
+  {
+    "children": [
+      {
         "text": "Slate is interesting, hopefully it'll work better than react-rte so we can have a better text editor. Some of the ",
       },
-      Object {
-        "italic": true,
+      {
+        "i": true,
         "text": "benefits",
       },
-      Object {
+      {
         "text": " of slate are:",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
-  Object {
-    "children": Array [
-      Object {
-        "children": Array [
-          Object {
-            "children": Array [
-              Object {
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
                 "text": "Total control over how everything works",
               },
             ],
-            "type": "paragraph",
+            "type": "p",
           },
         ],
-        "type": "list_item",
+        "type": "li",
       },
-      Object {
-        "children": Array [
-          Object {
-            "children": Array [
-              Object {
+      {
+        "children": [
+          {
+            "children": [
+              {
                 "text": "Near AST level API where you can control the editor / content",
               },
             ],
-            "type": "paragraph",
+            "type": "p",
           },
         ],
-        "type": "list_item",
+        "type": "li",
       },
-      Object {
-        "children": Array [
-          Object {
-            "children": Array [
-              Object {
-                "bold": true,
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "b": true,
                 "text": "Actively",
               },
-              Object {
+              {
                 "text": " maintained",
               },
             ],
-            "type": "paragraph",
+            "type": "p",
           },
         ],
-        "type": "list_item",
+        "type": "li",
       },
     ],
-    "type": "ol_list",
+    "type": "ol",
   },
-  Object {
-    "children": Array [
-      Object {
-        "children": Array [
-          Object {
-            "children": Array [
-              Object {
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
                 "text": "Apple",
               },
             ],
-            "type": "paragraph",
+            "type": "p",
           },
         ],
-        "type": "list_item",
+        "type": "li",
       },
-      Object {
-        "children": Array [
-          Object {
-            "children": Array [
-              Object {
+      {
+        "children": [
+          {
+            "children": [
+              {
                 "text": "Kiwi",
               },
             ],
-            "type": "paragraph",
+            "type": "p",
           },
         ],
-        "type": "list_item",
+        "type": "li",
       },
-      Object {
-        "children": Array [
-          Object {
-            "children": Array [
-              Object {
+      {
+        "children": [
+          {
+            "children": [
+              {
                 "text": "Strawberry",
               },
             ],
-            "type": "paragraph",
+            "type": "p",
           },
         ],
-        "type": "list_item",
+        "type": "li",
       },
     ],
-    "type": "ul_list",
+    "type": "ul",
   },
-  Object {
-    "children": Array [
-      Object {
+  {
+    "children": [
+      {
         "text": "Check out ",
       },
-      Object {
-        "children": Array [
-          Object {
+      {
+        "children": [
+          {
             "text": "my website",
           },
         ],
-        "type": "link",
+        "type": "a",
         "url": "https://jackhanford.com",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
-  Object {
-    "children": Array [
-      Object {
-        "children": Array [
-          Object {
+  {
+    "children": [
+      {
+        "children": [
+          {
             "text": "Always bet on javascript",
           },
         ],
-        "type": "paragraph",
+        "type": "p",
       },
     ],
-    "type": "block_quote",
+    "type": "blockquote",
   },
 ]
 `;
 
 exports[`Deserialize heading depth one to slate state object with {type: "heading-one", children: [{text: "hey"}]} 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "text": "hey",
     },
   ],
-  "type": "heading_one",
+  "type": "h1",
 }
 `;
 
 exports[`Deserialize heading depth three to slate state object with {type: "heading-three", children: [{text: "heading three"}]} 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "text": "heading three",
     },
   ],
-  "type": "heading_three",
+  "type": "h3",
 }
 `;
 
 exports[`Deserialize heading depth two to slate state object with {type: "heading-two", children: [{text: "heading two"}]} 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "text": "heading two",
     },
   ],
-  "type": "heading_two",
+  "type": "h2",
 }
 `;
 
 exports[`inserts empty text block if no children are given 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "text": "",
     },
   ],
-  "type": "heading_one",
+  "type": "h1",
 }
 `;

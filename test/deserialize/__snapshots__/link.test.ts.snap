@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`deserialize link 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "text": "Personal website",
     },
   ],
-  "type": "link",
+  "type": "a",
   "url": "https://jackhanford.com",
 }
 `;
 
 exports[`deserialize link with linkDestinationKey 1`] = `
-Object {
-  "children": Array [
-    Object {
+{
+  "children": [
+    {
       "text": "Shopping",
     },
   ],
   "custom-value": "https://eaze.com",
-  "type": "link",
+  "type": "a",
 }
 `;

@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Use unified to turn markdown into slate state 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
-        "children": Array [
-          Object {
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
             "text": "my link",
           },
         ],
-        "type": "link",
+        "type": "a",
         "url": "https://github.com",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
 ]
 `;

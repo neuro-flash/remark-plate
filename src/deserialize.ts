@@ -15,7 +15,7 @@ import {
   ParagraphNode,
   TextNode,
   ThematicBreakNode,
-} from './ast-types';
+} from '@/ast-types';
 
 export default function deserialize<T extends InputNodeTypes>(
   node: MdastNode,

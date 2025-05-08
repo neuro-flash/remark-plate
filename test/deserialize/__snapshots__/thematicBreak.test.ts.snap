@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When the list has thematic breaks 1`] = `
-Array [
-  Object {
-    "children": Array [
-      Object {
+[
+  {
+    "children": [
+      {
         "text": "",
       },
     ],
     "type": "thematic_break",
   },
-  Object {
-    "children": Array [
-      Object {
+  {
+    "children": [
+      {
         "text": "foo",
       },
     ],
-    "type": "paragraph",
+    "type": "p",
   },
 ]
 `;
